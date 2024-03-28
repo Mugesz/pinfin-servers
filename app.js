@@ -10,6 +10,9 @@ app.use(express.json())
 const applicants = require("./routes/applicants")
 app.use("/",applicants)
 
+const reporting = require("./routes/reporting")
+app.use("/report",reporting)
+
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
